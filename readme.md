@@ -1,6 +1,5 @@
+### go
 https://github.com/golang/go
-<br>
-https://github.com/golang/mobile
 
 #### SettingGOPATH
 
@@ -12,8 +11,14 @@ https://github.com/golang/go/wiki/SettingGOPATH
 
 ##### Edit your ~/.bash_profile to add the following line:
 ```bash
+export ANDROID_SDK_ROOT= ~/Library/Android/sdk
+export NDK_ROOT=$ANDROID_SDK_ROOT/ndk/19.2.5345600
+
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+
+export PATH=${PATH}:${ANDROID_SDK_ROOT}\tools:${ANDROID_SDK_ROOT}\platform-tools:${NDK_ROOT}:$GOPATH/bin
 ```
 
 
@@ -24,6 +29,9 @@ source ~/.bash_profile
 ```
 
 <br>
+
+### gomobile
+https://github.com/golang/mobile
 
 #### Gomobile is a tool for building and running mobile apps written in Go.
 https://pkg.go.dev/golang.org/x/mobile/cmd/gomobile
